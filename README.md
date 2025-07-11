@@ -73,17 +73,6 @@ No se requieren librerías externas adicionales.
    - Vuelve a esperar nuevos datos.
 
 ---
-
-## 💻 Comunicación Serial
-
-Envía por USB o vía Python/PySerial cadenas con dos floats y terminador `\n`.  
-```python
-import serial, time
-
-ser = serial.Serial('COM3', 115200, timeout=1)
-time.sleep(2)  # espera que Arduino arranque
-
-def apuntar(az, alt):
     cmd = f"{az:.2f} {alt:.2f}\n"
     ser.write(cmd.encode())
     line = ser.readline().decode().strip()
