@@ -79,4 +79,4 @@ No se requieren librerías externas adicionales.
     print(line)
 
 # Ejemplo: apuntar a az=45°, alt=30°
-apuntar(45.0, 30.0)
+En el serial: (45.0, 30.0)
